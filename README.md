@@ -9,6 +9,8 @@ small seller that runs it.
 - [`example/`](example/): a seller that takes MPP payments and checks the
   buyer's delegated authority before it charges.
 
+**Status:** draft 00, October 2026. Not yet proposed upstream; feedback is welcome as issues here.
+
 ## The short version
 
 **What MPP already does.** MPP lets a website charge for a request. The
