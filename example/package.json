@@ -1,0 +1,29 @@
+{
+  "name": "mpp-delegated-authority-example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A seller that takes MPP (Payment HTTP Authentication) charges and checks the buyer's delegated authority first, per draft-payment-delegated-authority-00. ALLOW settles; any refusal is 403 (or 503) and nothing is charged.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/example.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test --experimental-strip-types \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@delegus/conformance": "0.4.0",
+    "@delegus/core": "0.3.4"
+  },
+  "overrides": {
+    "@delegus/conformance": {
+      "@delegus/core": "$@delegus/core"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "(Apache-2.0 OR MIT)"
+}
